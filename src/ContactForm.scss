@@ -1,0 +1,60 @@
+@import './scss/bits';
+
+.MapSide{
+  width: 47%;
+  display: inline-block;
+}
+
+
+.ContactForm{
+  h2 { 
+    width:100%; 
+    text-align:center;
+    border-bottom: 1px solid #86b7a4;
+    line-height:0.1em;
+    margin:10px 0 20px;
+  } 
+  h2 span { 
+    background:#fff; 
+    padding:0 10px;
+    font-size: 36px;
+    font-weight: 300;
+  }
+  padding: 3rem;
+  .FormSide{
+    padding: 2rem 2rem 2rem 0;
+    width: 47%;
+    display: inline-block;
+    .button-default{
+      margin-top: 1rem;
+      margin: 1rem auto;
+      display: block;
+      border: none;
+      &:hover{
+        opacity: .8;
+      }
+    }
+  }
+  .input-form{
+    color: #436a5b;
+    input{
+      width: 100%;
+    }
+    textarea{
+      min-height: 7rem;
+      width: 100%;
+    }
+  }
+}
+
+@include breakpoint(mobileonly) {
+  .ContactForm{
+    padding: 5px;
+    .FormSide{
+      width: 100%;
+    }
+    .MapSide{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import './scss/bits';
+
+.articles{
+  background-color: #b6d4c8;
+  padding: 1rem 3rem;
+  h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  .articles-container{
+    display: flex;
+    flex-direction: row;
+    .articles-list-main{
+      flex-basis: 55%;
+      background-color: #ffffff;
+      img{
+        width: 100%;
+      }
+      .content{
+        padding: 1rem;
+        span{
+          a{
+            color:#b78e86;
+          }
+        }
+        h5{
+          font-size: 1.2rem;
+          color: #436a5b;
+          margin: 1rem 0;
+        }
+        p{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          line-height: 16px;
+          max-height: 128px;
+          -webkit-line-clamp: 6;/* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+
+    .articles-list-main-background{
+      height: 250px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .articles-list{
+      flex-basis: 45%;
+    }
+
+    .articles-list-item{
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      margin: 0 1rem 1rem 1rem;
+      overflow: hidden;
+      .sideImage{
+        display: inline-flex;
+        width: 26%;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-position: top;
+        background-size: cover;
+      }
+      .content{
+        padding: 1rem;
+        width: 65%;
+        font-size: 12px;
+        display: inline-block;
+        span{
+          a{
+            color:#b78e86;
+          }
+        }
+        h5{
+          margin: 1rem 0;
+          font-size: 13px;
+          letter-spacing: 0.6px;
+          color: #436a5b;
+        }
+        p{
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          line-height: 16px;     /* fallback */
+          max-height: 64px;      /* fallback */
+          -webkit-line-clamp: 4; /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(mobileonly) {
+  .articles{
+    padding: 5px;
+    h2{
+      font-size: 24px;
+    }
+    .articles-container{
+      flex-direction: column;
+      .articles-list{
+        .articles-list-item{
+          margin: 16px 0;
+          .sideImage{
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}

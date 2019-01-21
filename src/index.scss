@@ -1,0 +1,22 @@
+@import './scss/museoSansRounded';
+
+body {
+  margin: 0;
+  font-family: 'MuseoSansRounded';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.button-secondary{
+  background: transparent;
+  color: #86b7a4;
+  border: 1px solid #86b7a4;
+  padding: 12px 24px;
+  border-radius: 3px;
+  font-size: 16px;
+}

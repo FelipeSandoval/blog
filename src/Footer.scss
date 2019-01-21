@@ -1,0 +1,54 @@
+@import './scss/bits';
+
+.Footer{
+  transition: all 1s linear;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #436a5b;
+  width:90%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15px 5% 10px;
+  img{
+    width: 15%;
+  }
+  .contactInfo{
+    color: #c4ffe8;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    span{
+      font-size: 14px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 8px;
+        color: #c4ffe8;
+      }
+    }
+  }
+}
+
+@include breakpoint(mobileonly) {
+  .Footer{
+    flex-direction: column;
+    padding: 5% 15%;
+    align-items: flex-start;
+    img{
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    .contactInfo{
+      flex-direction: column;
+      width: 100%;
+      span{
+        margin-bottom: 20px;
+        align-items: flex-start;
+      }
+    }
+  }
+  
+}

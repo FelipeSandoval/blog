@@ -1,0 +1,29 @@
+.service-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  height: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 10rem;
+  .topLeft{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .topRight{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .bottomLeft{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .bottomRight{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .sideImage{
+    grid-column: 3;
+    grid-row: 1/3;
+  }
+}

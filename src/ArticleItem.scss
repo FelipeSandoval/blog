@@ -1,0 +1,36 @@
+.article-item{
+  &-image{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &-content{
+    padding: 1rem;
+    font-size: 12px;
+    background-color: #ffffff;
+    display: inline-block;
+    span{
+      a{
+        color:#b78e86;
+      }
+    }
+    h5{
+      margin: 1rem 0;
+      font-size: 13px;
+      letter-spacing: 0.6px;
+      color: #436a5b;
+    }
+    p{
+      margin: 0;
+      color: #000000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 16px;     /* fallback */
+      max-height: 64px;      /* fallback */
+      -webkit-line-clamp: 5; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+  }
+}
