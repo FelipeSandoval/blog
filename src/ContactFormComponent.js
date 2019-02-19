@@ -39,7 +39,11 @@ export default class ContactFormComponent extends Component{
       !this.state.isRequestDone ?
       <div className='contactFormContainer'>
         <Formik
-          initialValues={{ nombre: '', asunto: '' ,email: '', mensaje: '' }}
+          initialValues={{ 
+            nombre: '',
+            asunto: this.state.asunto ? this.state.asunto : undefined ,
+            email: '',
+            mensaje: '' }}
           validate={values => {
             let errors = {};
             if (!values.email) {
@@ -75,7 +79,6 @@ export default class ContactFormComponent extends Component{
                     className='input-form' 
                     type="text" 
                     name="asunto"
-                    value={this.state.asunto ? this.state.asunto : undefined}
                     disabled={this.state.disableAsunto}
                     />
                 <ErrorMessage className='input-form-error-message' name="asunto" component="div" />
