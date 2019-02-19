@@ -1,5 +1,20 @@
-.displayedImages{
-  
+@import './scss/bits';
+
+.displayedImagesDesktop{
+  width: 100%;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+.displayedImagesMobile{
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  img{
+    object-fit: cover;
+    width: 100%;
+  }
 }
 .genericServiceContainer{
   background-color: #f2f7f5;
@@ -48,7 +63,7 @@
       width: 49%;
       display: inline-block;
       input{
-        width: 100%;
+        width: 95%;
       }
       textarea{
         width: 100%;
@@ -71,7 +86,7 @@
       padding: 32px 24px;
       background-color: #f2f7f5;
       ul{
-        line-height: 1.5;
+        line-height: 1.8;
         li{
           font-size: 14px;
           font-weight: 300;
@@ -86,6 +101,7 @@
   }
 }
 
+
 .ServiceDetail{
   background-color: #f2f7f5;
   padding: 30px;
@@ -95,11 +111,39 @@
   padding: 45px 32px!important;
 }
 
-.page-title:after {
-  content: ""; /* This is necessary for the pseudo element to work. */ 
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
-  width: 100; /* Change this to whatever width you want. */
-  padding-top: 20px; /* This creates some space between the element and the border. */
-  border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+@include breakpoint(mobileonly) {
+  .generic-something{
+    padding: 92px 0 0 0;
+  }
+  .genericServiceContainer{
+    padding: 92px 0 0 0;
+  }
+  .displayedImagesDesktop{
+    display: none;
+  }
+  .displayedImagesMobile{
+    display: block;
+  }
+  .detailContainer{
+    padding: 0;
+    .detailResume{
+      padding: 25px 30px 0;
+      .contact-form{
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .mapSide{
+        width: 100%;
+      }
+    }
+  }
 }
+
+// .page-title:after {
+//   content: ""; /* This is necessary for the pseudo element to work. */ 
+//   display: block; /* This will put the pseudo element on its own line. */
+//   margin: 0 auto; /* This will center the border. */
+//   width: 100; /* Change this to whatever width you want. */
+//   padding-top: 20px; /* This creates some space between the element and the border. */
+//   border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+// }

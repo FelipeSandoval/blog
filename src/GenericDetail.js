@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './GenericDetail.scss';
 import blackAndWhiteLogo from './assets/logo-white-black.svg';
 
 export default class GenericDetail extends Component{
   render(){
     return(
-     <Fragment>
+     <div className='generic-something'>
       <div className='displayedImages'>
         <img src={this.props.image} alt=''/>
       </div>
@@ -48,7 +48,7 @@ export default class GenericDetail extends Component{
             </div>
         </div>
       </div>
-    </Fragment>
+    </div>
     )
   }
 }

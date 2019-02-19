@@ -1,10 +1,16 @@
 @import './scss/museoSansRounded';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 body {
   margin: 0;
+  max-width: 1440px;
   font-family: 'MuseoSansRounded';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  p{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 }
 
 code {

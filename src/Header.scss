@@ -1,17 +1,24 @@
 @import './scss/bits';
 
-.header-container{
+.header-container-desktop{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 42px 90px;
   .header-left{
     justify-items: flex-start;
+    img.header-logo{
+      cursor: pointer;
+      display: block;
+    }
   }
   .header-right{
+    .is-active{
+      box-shadow: inset 0 0px 0 #ffffff, inset 0 -1px 0 #95ffd5;
+    }
     padding: 1rem 5rem;
     right: 0;
-    // position: absolute;
+    position: absolute;
     a{
       color:#86b7a4;
       margin: 0 1rem;
@@ -23,10 +30,121 @@
   }
 }
 
-@include breakpoint(mobileonly) {
-  .header-container{
-    .header-right{
-      display: none;
+.header-container-mobile{
+  display: none;
+  .header-left{
+    transition: .2s all ease;
+    height: 92px;
+    position: fixed;
+    background-color: #ffff;
+    z-index: 1000;
+    img.header-logo{
+      margin: 0px 0px 20px 120px;
+      cursor: pointer;
+      padding: 13px 0;
+      display: block;
+      height: 66px;
+      width: 60%;
     }
   }
+  .button-default{
+    display: block;
+    margin: 20px auto;
+  }
 }
+
+@include breakpoint(mobileonly) {
+  .header-container-desktop{
+    display: none;
+  }
+  .header-container-mobile{
+    display: block;
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  background-color: #86b7a4;
+  position: fixed;
+  padding: 10px;
+  margin-bottom: 16px;
+  width: 66px;
+  height: 66px;
+  left: 0;
+  top: 0;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #ffffff;
+  text-align: center;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  // &:first-of-type{
+  //   border-top: 1px solid black;
+  // }
+  // padding: 5px 0;
+  // border-bottom: 1px solid black;
+  padding: 16px 0;
+  display: inline-block;
+  border-bottom: 1px solid #b6d4c8;
+  color:#436a5b;
+  text-decoration: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+

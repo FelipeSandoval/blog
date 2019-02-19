@@ -11,7 +11,7 @@ class AboutMe extends Component {
   }
 
   redirectToTarget = () => {
-    this.props.history.push(`/aboutMe`)
+    this.props.history.push(`/acercaDeMi`);
   }
 
   render(){

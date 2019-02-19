@@ -1,6 +1,7 @@
 @import './scss/bits';
 
 .Footer{
+  z-index: 100;
   transition: all 1s linear;
   display: flex;
   justify-content: space-between;
@@ -34,8 +35,11 @@
 
 @include breakpoint(mobileonly) {
   .Footer{
+    z-index: 1000;
+    position: relative;
     flex-direction: column;
-    padding: 5% 15%;
+    padding: 5% 60px;
+    width: auto;
     align-items: flex-start;
     img{
       width: 80%;

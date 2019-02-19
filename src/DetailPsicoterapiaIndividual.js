@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ServicesDetails  from './DetailGenericService';
-import PsicoterapiaIndividual from './assets/psicoterapiaIndividual.jpg';
+import PsicoterapiaIndividualDesktop from './assets/psicoterapiaIndividual.jpg';
+import psicoterapiaIndividualMobile from './assets/psicoterapia-individual.jpg';
 
 export default class DetailPsicoterapiaIndividual extends Component{
   render(){
@@ -16,7 +17,8 @@ export default class DetailPsicoterapiaIndividual extends Component{
     }
     return(
       <ServicesDetails 
-          image={PsicoterapiaIndividual} 
+          image={PsicoterapiaIndividualDesktop}
+          responsiveImage={psicoterapiaIndividualMobile}
           title={text.title}
           paragraph={text.paragraph}
           serviceDetail={text.serviceDetail}

@@ -28,12 +28,12 @@ ReactDOM.render(
         <Route path='/landing' component={Landing} />
         <Route path='/acercaDeMi' component={DetailAboutMe} />
         <Route path='/psicoteriaInfantil' component={DetailPsicoteriaInfantil} />
-        <Route path='/articles' component={DetailArticles} />
-        <Route path='/servicios' component={DetailServicesComponent} />
         <Route path='/terapiaSexologa' component={DetailTerapiaSexologa} />
         <Route path='/terapiaParejas' component={DetailTerapiaParejas} />
         <Route path='/psicoterapiaGestalticaGrupal' component={DetailPsicoterapiaGestalticaGrupal} />
         <Route path='/psicoterapiaIndividual' component={DetailPsicoterapiaIndividual} />
+        <Route path='/articles' component={DetailArticles} />
+        <Route path='/servicios' component={DetailServicesComponent} />
         <Route path='/formularioContacto' component={DetailContactForm} />
         <Route exact path='/' render={ () => <Redirect to='/landing'/>}/>
         <Route exact path='/*' render={ () => <Redirect to='/landing'/>}/>

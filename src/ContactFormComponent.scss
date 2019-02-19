@@ -1,0 +1,28 @@
+.contactFormContainer{
+  form{
+    label{
+      color: #436a5b;
+    }
+    input{
+      width: 100%;
+      &:disabled{
+        background: #eeffee;
+      }
+    }
+    textarea{
+      min-height: 100px;
+      width: 100%;
+    }
+  }
+  .input-form-error-message{
+    color: #D0021B;
+    font-size: 12px;
+  }
+  button{
+    text-align: center;
+  }
+  .button-default{
+    margin: 0 auto;
+    display: block;
+  }
+}

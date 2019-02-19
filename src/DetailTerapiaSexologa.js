@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ServicesDetails  from './DetailGenericService';
-import services from './assets/services.png';
+import terapiaSexologaBanner from './assets/terapiaSexologaBanner.jpg';
+import terapiaSexologica from './assets/terapiaSexologica.jpg';
 
 export default class DetailTerapiaSexologa extends Component{
   render(){
@@ -23,7 +24,8 @@ export default class DetailTerapiaSexologa extends Component{
     }
     return(
       <ServicesDetails 
-          image={services} 
+          image={terapiaSexologaBanner}
+          responsiveImage={terapiaSexologica}
           title={text.title}
           paragraph={text.paragraph}
           serviceDetail={text.serviceDetail}

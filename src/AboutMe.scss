@@ -17,11 +17,17 @@
     padding: 5rem;
     button{
       margin-top: 24px;
+      &:hover, &:active{
+        transition: .4s all ease;
+        background: #86b7a4;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+      }
     }
   }
 
   @include breakpoint(mobileonly) {
-    padding: .5rem;
+    padding: 92px .5rem .5rem .5rem;
     flex-direction: column;
     img{
       width: 100%;

@@ -55,15 +55,16 @@ export default class DetailArticles extends Component{
   }
 
   componentDidUpdate(){
-    console.log(this.state);
+    
   }
 
 
   render(){
     let secondaryList = this.state.secondary ? 
-        this.state.secondary.map((item) => (
+        this.state.secondary.map((item, i) => (
           <ArticleItem 
             image={item.image}
+            key={i}
             url={item.url}
             tag={item.tag}
             title={item.title}

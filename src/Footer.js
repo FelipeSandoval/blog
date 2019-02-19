@@ -21,8 +21,9 @@ export default class Footer extends Component{
   }
 
   componentDidMount(){
-    this.setState({ componentHeigh: document.querySelector('.Footer').clientHeight})
-    window.addEventListener('scroll', this.handleScroll);
+    this.setState({ componentHeigh: document.querySelector('.Footer').clientHeight}, () => {
+      window.addEventListener('scroll', this.handleScroll);
+    });
   }
 
   componentWillMount(){
@@ -31,10 +32,11 @@ export default class Footer extends Component{
 
   render(){
     return (
-      <div className='Footer' style={this.state.isAtScrollBottom ? {position : 'relative'} : {position : 'fixed'} }>
+      <div className='Footer'>
+      {/* style={this.state.isAtScrollBottom ? {position : 'relative'} : {position : 'fixed'} } */}
         <img src={iconFooter} alt=''/>
         <div className='contactInfo'>
-          <span><MdPhoneIphone /> +5695555333</span>
+          <span><MdPhoneIphone /> +56981382282</span>
           <span><MdMailOutline />contacto@carolafernandez.cl</span>
         </div>
       </div>

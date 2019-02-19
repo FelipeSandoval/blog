@@ -1,8 +1,21 @@
+@import './scss/bits';
+
 .service-image{
   position: relative;
+  &.hover{
+    &:hover{
+      opacity: .8;
+    }
+  }
   img{
     object-fit: cover;
     width: 100%;
+  }
+  .service-image-img-desktop{
+    display: block;
+  }
+  .service-image-img-mobile{
+    display: none;
   }
   span{
     background-color: rgba(255, 255, 255, 0.8);
@@ -12,5 +25,14 @@
     right: 0;
     font-size: 24px;
     color: #4a4a4a;
+  }
+}
+
+@include breakpoint(mobileonly) {
+  .service-image-img-desktop{
+    display: none!important;
+  }
+  .service-image-img-mobile{
+    display: block!important;
   }
 }
