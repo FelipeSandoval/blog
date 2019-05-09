@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LinesEllipsis from 'react-lines-ellipsis'
 import './MyArticles.scss';
 
 
@@ -13,7 +14,13 @@ export default class MyArticles extends Component{
         <div className='content'>
           <span><a target="_blank" rel="noopener noreferrer" href={cv.url}>{cv.tag}</a> - {cv.fecha}</span>
           <h5>{cv.title}</h5>
-          <p>{cv.paragraph}</p>
+          <LinesEllipsis
+            text={cv.paragraph}
+            maxLine='4'
+            ellipsis='...'
+            trimRight
+            basedOn='letters'
+          />
         </div>
       </div>
     ));
@@ -28,7 +35,13 @@ export default class MyArticles extends Component{
             <div className='content'>
               <span><a  target="_blank" rel="noopener noreferrer" href={mainArticle.url}>{mainArticle.tag}</a> - {mainArticle.fecha}</span>
               <h5>{mainArticle.title}</h5>
-              <p>{mainArticle.paragraph}</p>
+              <LinesEllipsis
+                text={mainArticle.paragraph}
+                maxLine='6'
+                ellipsis='...'
+                trimRight
+                basedOn='letters'
+              />
             </div>
           </div>
           <div className='articles-list'>

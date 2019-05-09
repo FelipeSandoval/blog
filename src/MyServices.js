@@ -42,7 +42,7 @@ class MyServices extends Component {
         <div className='c service-image'>
           <ServiceImage
             callBack={this.routeChange}
-            url={url.terapiaParejas}
+            url={url.psicoteriaInfantil}
             img={infantil}
             responsiveImage={infantil}
             text={'Psicoterapia infantil'}
@@ -51,7 +51,7 @@ class MyServices extends Component {
         <div className='d service-image'>
           <ServiceImage 
             callBack={this.routeChange}
-            url={url.terapiaParejas}
+            url={url.psicoterapiaIndividual}
             img={individual}
             responsiveImage={individual}
             text={'Psicoterapia Individual'}
@@ -60,7 +60,7 @@ class MyServices extends Component {
         <div className='e service-image'>
           <ServiceImage
             callBack={this.routeChange}
-            url={url.terapiaParejas}
+            url={url.terapiaSexologa}
             img={sexologica}
             responsiveImage={sexologica}
             text={'Terapia sexológica'}
@@ -69,7 +69,7 @@ class MyServices extends Component {
         <div className='f'>
           <ServiceImage
             callBack={this.routeChange}
-            url={url.terapiaParejas}
+            url={url.psicoterapiaGestalticaGrupal}
             img={gestaltica}
             responsiveImage={gestalticaSmall}
             text={'Psicoterapia Gestáltica grupal'}
